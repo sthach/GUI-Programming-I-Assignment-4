@@ -1,0 +1,97 @@
+<!Doctype html>
+<!--   
+Name: Sony Thach 
+Email: sony_thach@student.uml.edu   
+Comp.4610, GUI Programming I   
+Description: Assignment 4
+-->
+<html lang="en">
+
+<head>
+    <title>Assignment 4</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/Assignment4.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Assignment4.css">
+</head>
+
+<body>
+<!--
+Form to ask for how many values of Prices and Miles Per Gallon user will be entering. Also asks user to choose if they are financing the cars or
+leasing.
+-->
+    <form id="rowColumnsForm">
+        <label for="numberOfColumns">How many different car prices would you like to enter?</label>
+        <input id="numberOfColumns" type="number" name="prices">
+        <br>
+        <label for="numberOfRows">How many different miles per gallons values would you like to enter?</label>
+        <input id="numberOfRows" type="number" name="milesPerGallons"><br>
+        <label> Select Car Purchase Option:</label><br>
+        <input type="radio" name="purchase_option" id="finance">Finance
+        <input type="radio" name="purchase_option" id="lease">Lease<br>
+        <button type="submit" id="submit_table_dimensions">Submit</button><br>
+    </form>
+<!--
+	Form asking user to input prices which will be done dynamically using javascript.
+-->
+    <form id="priceEntryForm"></form>
+<!--
+	Form asking user to input miles per gallon values which will be done dynamically using javascript.
+
+-->
+    <form id="mpgEntryForm"></form>
+<!--
+	Form asking user inputs for financing option.
+-->
+    <form id="financeForm">
+        <label for="estimatedMilesDriven1">Estimated Miles Driven Per Year:</label>
+        <input id="estimatedMilesDriven1" type="number" name="Miles">
+        <br>
+        <label for="costPerGallon1">Cost Per Gallon Of Gas: $</label>
+        <input id="costPerGallon1" type="number">
+        <br>
+        <label for="interestRate1">Interest Rate:%</label>
+        <input id="interestRate1" type="number" name="Interest Rate">
+        <br>
+        <label for="monthsOfPayment1">Months Of Payment: </label>
+        <input id="monthsOfPayment1" type="number" name="Monthly Payment">
+        <br>
+        <button type="submit" id="calculateButton1" value="Calculate">
+                Calculate
+        </button>
+    </form>
+<!--
+	Form asking user inputs for leasing option.
+-->
+    <form id="leaseForm">
+        <label for="estimatedMilesDriven2">Estimated Miles Driven Per Year:</label>
+        <input id="estimatedMilesDriven2" type="number" name="Miles Per Year">
+        <br>
+        <label for="milesDrivenAllowed">Miles Allowed Per Year:</label>
+        <input id="milesDrivenAllowed" type="number" name="Miles Allowed">
+        <br>
+        <label for="costPerGallon2">Cost Per Gallon Of Gas: $</label>
+        <input id="costPerGallon2" type="number">
+        <br>
+        <label for="leaseMonthlyCost">Leasing Cost Per Month: $</label>
+        <input id="leaseMonthlyCost" type="number" name="Leasing Cost Per Month">
+        <br>
+        <label for="costPerAdditionalMile">Cost Per Additional Mile Exceeding Allowed Miles: $</label>
+        <input id="costPerAdditionalMile" type="number" name="Dealer's Discount">
+        <br>
+        <label for="monthsOfPayment2">Months Of Payment:</label>
+        <input id="monthsOfPayment2" type="number" name="Months Of Payment">
+        <br>
+        <button type="submit" id="calculateButton2" value="Calculate">
+                Calculate
+        </button>
+    </form>
+<!--
+	Tables showing comparisons of cost per month and per mile for different combinations of miles per gallons and prices.
+-->
+    <table id="financeTable">
+    </table>
+    <table id="leaseTable">
+    </table>
+</body>
+
+</html>
